@@ -1,0 +1,17 @@
+<setup>
+    <block title="RT Alerts">
+        <text>Configure RT Ticket Creation</text>
+    </block>
+
+    <block title="Server" endpoint="admin/alert_actions" entity="rt_connect">
+        <input field="param.base_url">
+            <label>Server Base URL</label>
+            <type>text</type>
+        </input>
+        <input field="param.auth_token">
+            <label>API Token</label>
+            <type>text</type>
+        </input>
+    </block>
+
+</setup>

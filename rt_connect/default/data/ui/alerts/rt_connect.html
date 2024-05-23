@@ -1,0 +1,70 @@
+<form class="form-horizontal form-complex">
+    <div class="control-group">
+        <label class="control-label" for="rt_queue">Queue</label>
+
+        <div class="controls">
+            <input type="text" name="action.rt_connect.param.queue" id="rt_queue" value="4"></input>
+            <span class="help-block">Default: 4 (Incident Reports queue in RT/IR)</span>
+        </div>
+    </div>
+    <div class="control-group">
+        <label class="control-label" for="rt_requestor">Requestor</label>
+
+        <div class="controls">
+            <input name="action.rt_connect.param.requestor" id="rt_requestor"></input>
+            <span class="help-block">
+                Email address for the requestor.
+            </span>
+        </div>
+    </div>
+    <div class="control-group">
+        <label class="control-label" for="rt_subject">Subject</label>
+
+        <div class="controls">
+            <input type="text" name="action.rt_connect.param.subject" id="rt_subject" value="Splunk alert $name$"></input>
+            <span class="help-block">
+                Default: "Splunk alert &lt;name&gt;"
+            </span>
+        </div>
+    </div>
+    <div class="control-group">
+        <label class="control-label" for="rt_content">Content</label>
+
+        <div class="controls">
+            <textarea name="action.rt_connect.param.content" id="rt_content" style="height: 120px;">$results_link$ ($trigger_date$ $trigger_timeHMS$)</textarea>
+            <span class="help-block">
+                Enter the content of the ticket
+                The message, and all other fields, can include tokens that insert text based on the results of the search.
+                <a href="https://docs.splunk.com/Documentation/Splunk/8.0.0/AdvancedDev/ModAlertsLog" target="_blank"
+                   title="Splunk help">Learn More <i class="icon-external"></i></a>
+            </span>
+        </div>
+    </div>
+    <div class="control-group">
+        <label class="control-label" for="rt_reporter_type">Reporter Type</label>
+        <div class="controls">
+            <input type="text"  name="action.rt_connect.param.rt_reporter_type" id="rt_reporter_type" value="Splunk Alert"></input>
+            <span class="help-block">
+               Default: "Splunk Alert".
+            </span>
+        </div>
+    </div>
+    <div class="control-group">
+        <label class="control-label" for="rt_how_reported">How Reported</label>
+        <div class="controls">
+            <input type="text"  name="action.rt_connect.param.rt_how_reported" id="rt_how_reported" value="REST"></input>
+            <span class="help-block">
+                default: "REST".
+            </span>
+        </div>
+    </div>
+    <div class="control-group">
+        <label class="control-label" for="rt_ip">IP</label>
+        <div class="controls">
+            <input type="text"  name="action.rt_connect.param.rt_ip" id="rt_ip" value="$result.clientip$"></input>
+            <span class="help-block">
+                Default: the <tt>clientip</tt> field.
+            </span>
+        </div>
+    </div>
+</form>
