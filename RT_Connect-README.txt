@@ -97,3 +97,8 @@ in /opt/splunk/etc/apps/rt_connect
   ex:
     'Hostname' => 23,
 
+Repository
+=====================
+The source code for this app is available at
+
+https://github.com/bestpractical/splunk-rt-app
