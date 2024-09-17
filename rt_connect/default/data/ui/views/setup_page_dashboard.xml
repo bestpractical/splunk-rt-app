@@ -1,0 +1,29 @@
+<dashboard isDashboard='false'
+           script='javascript/setup_page.js'
+           stylesheet='styles/setup_page.css'
+           hideTitle='true'
+           version='1.1'>
+    <row>
+        <panel>
+            <html>
+                <div id='main_container'>
+                    <h3>RT Connect Setup Page</h3>
+                    <div>
+                        <div class='text'>
+                            <span>Enter RT Server Base URL:</span>
+                            <input type='text' id='base_url_input'></input>
+                        </div>
+                        <div class='text'>
+                            <span>Enter API Token:</span>
+                            <input type='text' id='auth_token_input'></input>
+                        </div>
+                        <button id='setup_button'>Complete Setup</button>
+                        <div class='success'>Configuration saved successfully, redirecting to app...</div>
+                        <div class='error'>Issue encountered during setup, details below:</div>
+                        <code id='error_details'></code>
+                    </div>
+                </div>
+            </html>
+        </panel>
+    </row>
+</dashboard>
